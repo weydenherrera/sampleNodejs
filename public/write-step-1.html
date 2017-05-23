@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title block allowing child pages to override-->
+    <title>JinJerJade</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Bower Components-->
+    <link href="assets/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/vendor/authservice/authservice.css" rel="stylesheet" type="text/css">
+    <!-- Fonts-->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  </head>
+  <body>
+    <nav class="nav close"><a class="menu-close" href="javascript:void(0)" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">&times;</a>
+      <ul>
+        <li><a href="my_reviews.html">My Reviews</a></li>
+        <li><a href="">Browse Reviews</a></li>
+        <li><a href="">Write Review</a></li>
+        <li><a href="">Self-Help Tools</a></li>
+        <li><a href="">How it Works</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="">Feedback / Contact</a></li>
+        <li role="separator"><br></li>
+        <li role="separator"><br></li>
+        <li role="separator"><br></li>
+        <li><a href="" id="authservice-login-mainbutton" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">Sign in</a></li>
+        <li><a href="my_reviews.html" id="authservice-settings-button" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">Account Settings</a><a href="" id="authservice-logout-button" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">Sign out</a></li>
+      </ul>
+    </nav>
+    <header>
+      <nav>
+        <div class="menu"><a class="burger-bar" href=""><i class="top"></i><i class="mid"></i><i class="bot"></i></a></div>
+        <div class="logo"><a href="index.html"><img src="assets/images/logo.png"></a></div>
+        <div class="languages"><a href=""><img src="assets/images/flag-china.png"></a></div>
+      </nav>
+      <div class="search"><span class="input" contenteditable="true" onfocus="this.innerHTML = &quot;&quot;" onblur="this.innerHTML = &quot;Search for Insurer&quot;">Search for Insurer</span></div>
+    </header>
+    <section>
+      <div class="container">
+        <article>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="steps"><a class="part active" href="" data-label="Info" data-step="1"></a><a class="bullets hidden-xs hidden-sm active" href="" data-label="Insurer"></a><a class="bullets hidden-xs hidden-sm" href="" data-label="Product"></a><a class="bullets hidden-xs hidden-sm" href="" data-label="Means of Purchase"></a><a class="bullets hidden-xs hidden-sm" href="" data-label="Purchase Date"></a><a class="part" href="" data-label="My Review" data-step="2"></a><a class="part" href="" data-label="Publish" data-step="3"></a></div>
+            </div>
+            <div class="col-md-4">
+              <div class="answers">
+                <p>Lets start with your Insurance Company...</p><br>
+                <div class="scroll">
+                  <div class="search"><span contenteditable="true" onfocus="this.innerHTML = &quot;&quot;" onblur="this.innerHTML = &quot;Search&quot;">Search</span></div>
+                  <div class="choices">
+                    <div class="bar">AIA</div>
+                    <div class="bar">AXA</div>
+                    <div class="bar">Manulife</div>
+                    <div class="bar">Met Life</div>
+                    <div class="bar">Prudential</div>
+                    <div class="bar">Met Life</div>
+                    <div class="bar">Prudential</div>
+                    <div class="bar">Prudential</div>
+                    <div class="bar">Met Life</div>
+                    <div class="bar">Prudential</div>
+                  </div>
+                </div>
+                <div class="fender hidden-xs"></div>
+              </div><br>
+              <div class="text-center">
+                <big class="link"><a href="">I don't see my insurer?</a></big>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-graphic">
+          <div class="col rocket hidden-xs">
+            <div class="image"><img src="assets/images/img-rocket.png"></div>
+          </div>
+          <div class="col support">
+            <div class="image">
+              <div class="bubble _fluid"><a href="">How can I help?</a></div><img src="assets/images/img-boy.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-xs-4">
+            <div class="logo"><img src="assets/images/icon-footer.png"></div>
+          </div>
+          <div class="col-md-8 col-xs-8">
+            <nav><a href="">Write a Review</a><a href="">Browse Reviews</a><a href="">FAQ</a><a href="">How it Works</a><a href="">Self-Help Tools</a><a href="">About JinJerJade</a><a href="">For Insurers</a></nav>
+          </div>
+          <div class="col-md-2 hidden-xs">
+            <div class="social"><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-instagram"></i></a></div>
+          </div>
+        </div><br>
+        <hr>
+        <p class="links"><a href="">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="">&copy;Galileo Platforms</a></p>
+      </div>
+    </footer>
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel">
+      <div class="modal-dialog modal-sm" role="document" align="center">
+        <div class="modal-content" id="authservice-login-div">
+          <div class="modal-body">
+            <div class="modal-graphic login">
+              <div class="buttons"><img src="assets/images/img-buttons.png"></div>
+              <div class="girl"><img src="assets/images/img-girl-rotate-left.png"></div>
+            </div>
+            <p class="text-center">Almost there! Please sign in or register to post your review.</p>
+            <div class="form-group _form">
+              <input class="form-control" type="email" id="authservice-login-username" placeholder="Email">
+              <input class="form-control" type="password" id="authservice-login-password" placeholder="password">
+            </div><a class="jjj-btn green block" href="" id="authservice-login-submit" onclick="return false;">Sign in</a>
+            <div class="alert alert-danger" id="authservice-login-errmsg" role="alert" style="display:none;"><span class="glyphicon glyphicon-exclamation-sign aria-hidden"></span><span class="sr-only">Error:</span>Invalid email / password</div>
+            <p class="or">or</p><a class="jjj-btn fb block" href=""><i class="fa fa-facebook"></i>&nbsp;Login with Facebook</a><br><br><a class="jjj-btn link block" href="#modalSignupEmail" data-toggle="modal" data-dismiss="modal">Sign up with your email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSignupEmail" tabindex="-1" role="dialog" aria-labelledby="modalSignupEmailLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header signup-email">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="logo text">JinJerJade</div>
+                <p class="text-center">Please sign in below, or sign up using your email or social account.</p><br>
+                <div class="form-group">
+                  <form name="myEmailForm"></form>
+                  <input class="form-control" type="email" placeholder="Enter your email address" name="inputEmail" id="authservice-signup-email"><span class="error" id="authservice-signup-errmsg"> </span>
+                  <p class="text-center">Enter a valid email address.</p>
+                </div><a class="jjj-btn green block" href="" data-toggle="modal" data-dismiss="modal" id="authservice-signup-email-button">Continue</a>
+                <p class="or">or continue with</p><a class="jjj-btn fb block" href=""><i class="fa fa-facebook"></i>&nbsp;Login with Facebook</a>
+                <p></p><a class="jjj-btn gplus block" href=""><i class="fa fa-google-plus"></i>&nbsp;Login with Google +</a>
+              </div>
+            </div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalNiceWork" tabindex="-1" role="dialog" aria-labelledby="modalNiceWorklLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <h2 class="text-center">Nice Work!</h2><br>
+                <div class="text-center"><img src="assets/images/img-boom.png"></div><br><br>
+                <p class="text-center">You're all set! Now go forth and get your review on!</p><br><a class="jjj-btn green block" href="">Browse Reviews</a>
+                <p></p><a class="jjj-btn blue block" href="">Write a Review</a>
+                <div class="clearfix"><br></div>
+                <p class="text-center">Want to get in touch?&nbsp;<a class="link green" href="">Contact Us.</a></p>
+              </div>
+            </div><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalNiceWork2" tabindex="-1" role="dialog" aria-labelledby="modalNiceWorklLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h2 class="text-center">Nice Work!</h2><br>
+                <div class="text-center"><img src="assets/images/img-checklist.png"></div><br><br>
+                <p class="text-center">You did it, you're officially a member of the Jinjerjade family. One last thing, we need you to verify hyour email. So please check your inbox and in the meantime...</p><br>
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3"><a class="jjj-btn green block" href="">Browse Reviews</a>
+                    <p></p><a class="jjj-btn blue block" href="insurer.html">Write a Review</a>
+                  </div>
+                </div>
+                <div class="clearfix"><br></div>
+                <p class="text-center">Want to get in touch?&nbsp;<a class="link green" href="">Contact Us.</a></p>
+              </div>
+            </div><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="modalSignupFormLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-list.png"></div>
+                <h2 class="text-center">Welcome!</h2>
+                <p class="text-center">Looks like you're new here. Please fill out the below info to create an account</p><br>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input class="form-control" type="text" placeholder="Enter your email address" value="john@example.com" id="authservice-signup-form-email" disabled>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input class="form-control" type="text" placeholder="" value="John">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Last / Family Name</label>
+                      <input class="form-control" type="text" placeholder="" value="Smith">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input class="form-control" type="text" placeholder="" value="John">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input class="form-control" type="password" placeholder="" value="password">
+                </div>
+                <div class="form-group">
+                  <label>Re-enter Password</label>
+                  <input class="form-control" type="password" placeholder="" value="password">
+                </div>
+                <div class="text-center">
+                  <p class="or">Password must be 6 characters and at least one numeric digit or a special character (#,$, %, etc.)</p>
+                </div><br>
+                <div class="text-center"><a class="jjj-btn green" href="#modalNiceWork2" data-toggle="modal" data-dismiss="modal">Sign up</a></div>
+              </div>
+            </div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalMemberLogin" tabindex="-1" role="dialog" aria-labelledby="modalMemberLoginLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header signup-email">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <h2 class="text-center">Welcome Back!</h2>
+                <p class="text-center">Please enter your password below to sign in.</p><br>
+                <div class="form-group">
+                  <input class="form-control" type="text" id="authservice-loginEmail-username" placeholder="Enter your email address" value="">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="password" id="authservice-loginEmail-password" placeholder="Enter your Password" value="">
+                </div>
+                <div class="alert alert-danger" id="authservice-loginEmail-errmsg" role="alert" style="display:none;"><span class="glyphicon glyphicon-exclamation-sign aria-hidden"></span><span class="sr-only">Error:</span>Invalid email / password</div><a class="jjj-btn green block" href="" data-toggle="modal" data-dismiss="modal" id="authservice-loginEmail-submit">Continue</a>
+                <p class="or">or</p><a class="jjj-btn fb block" href=""><i class="fa fa-facebook"></i>&nbsp;Login with Facebook</a>
+                <p></p><a class="jjj-btn gplus block" href=""><i class="fa fa-google-plus"></i>&nbsp;Login with Google +</a>
+              </div>
+            </div>
+            <div class="clearfix"><br></div><a class="jjj-btn link block" href="#modalSignupEmail" data-toggle="modal" data-dismiss="modal">Sign up with your email</a><br>
+            <p class="text-center">Forgot your password?&nbsp;<a class="link green" href="" data-toggle="modal" data-dismiss="modal" id="authservice-reset-password">Reset it.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalResetPassword" tabindex="-1" role="dialog" aria-labelledby="modalResetPasswordLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-bunny.png"></div>
+                <h2 class="text-center">Doh!</h2>
+                <p class="text-center">Enter your email address and we'll send you instructions to reset your password.</p><br>
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Enter your email address" value="john@email.com">
+                </div><a class="jjj-btn green block" href="#modalGotMail" data-toggle="modal" data-dismiss="modal">Continue</a>
+              </div>
+            </div>
+            <div class="clearfix"><br><br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalGotMail" tabindex="-1" role="dialog" aria-labelledby="modalGotMailLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-bunny.png"></div>
+                <h2 class="text-center">You've Got Mail!</h2>
+                <p class="text-center">We've sent you an email with instructions to reset your password. Please check your inbox.</p><br><br><a class="jjj-btn green block" href="#" data-toggle="modal" data-dismiss="modal">Thanks!</a>
+              </div>
+            </div>
+            <div class="clearfix"><br><br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalNewPassword" tabindex="-1" role="dialog" aria-labelledby="modalNewPasswordLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-wand.png"></div>
+                <h2 class="text-center">Reset Password</h2>
+                <p class="text-center">We all forget! Your new password must be 6 characters and at least one numeric digit or a special character (#, $, % etc.).</p><br>
+                <div class="form">
+                  <div class="form-group">
+                    <label><small>New Password</small></label>
+                    <input class="form-control" type="password" placeholder="" value="password">
+                  </div>
+                  <div class="form-group">
+                    <label><small>Re-enter New Password</small></label>
+                    <input class="form-control" type="password" placeholder="" value="password">
+                  </div>
+                </div><a class="jjj-btn green block" href="#modalNiceWork" data-toggle="modal" data-dismiss="modal">Continue</a>
+              </div>
+            </div>
+            <div class="clearfix"><br><br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+          <Are>you sure?</Are>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2"></div>
+        <button class="btn btn-primary" type="button" data-dismiss="modal" id="delete">Delete</button>
+        <button class="btn" type="button" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+    <!-- Bower Components-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/scripts/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
+    <script src="assets/scripts/main.js" type="text/javascript"></script>
+    <script src="assets/vendor/authservice/authservice.js" type="text/javascript"></script>
+    <script src="assets/scripts/environment.js" type="text/javascript"></script>
+    <!-- page scripts goes here...-->
+    <!-- External Script goes here...-->
+    <script>
+      $(document).ready(function() {
+        
+        $('.answers .search').on('keydown', 'span', function(e) {
+          if ( e.keyCode == 13 ) {
+            e.preventDefault();
+            //- Add form action here.
+          }
+        });
+        
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        
+        $('header').on('click', '.burger-bar', function(e) {
+          e.preventDefault();
+          $('nav.nav').toggleClass('close');
+        });
+        
+      });
+      
+      
+      /*
+       *  Set up the login part at the top of the page.
+       */
+      authservice.init({
+        // Environment specific values are defined in environment.js
+        host: AUTHSERVICE_HOST,
+        port: AUTHSERVICE_PORT,
+        tenant: AUTHSERVICE_TENANT,
+        pretend: AUTHSERVICE_USE_DUMMY_LOGIN,
+        onUserChange: function(user, ttuat, fromCookie) {
+          // If the current user came from the cookie, reload it
+          //if (fromCookie) {
+          //  console.log('Reloading user details (cookie details are just a summary)');
+          //  return authservice.reloadUser();
+          //}
+        }
+      
+      });
+    </script>
+  </body>
+</html>

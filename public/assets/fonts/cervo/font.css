@@ -1,0 +1,128 @@
+@font-face {
+	font-family: 'Cervo Neue ExtraLight Neue';
+	src: url('CervoNeue-ExtraLightNeue.eot');
+	src: local('Cervo Neue ExtraLight Neue'), local('CervoNeue-ExtraLightNeue'), url('CervoNeue-ExtraLightNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-ExtraLightNeue.woff2') format('woff2'), url('CervoNeue-ExtraLightNeue.woff') format('woff'), url('CervoNeue-ExtraLightNeue.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue SemiBold Neue';
+	src: url('CervoNeue-SemiBoldNeue.eot');
+	src: local('Cervo Neue SemiBold Neue'), local('CervoNeue-SemiBoldNeue'), url('CervoNeue-SemiBoldNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-SemiBoldNeue.woff2') format('woff2'), url('CervoNeue-SemiBoldNeue.woff') format('woff'), url('CervoNeue-SemiBoldNeue.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue Black Neue';
+	src: url('CervoNeue-BlackNeue.eot');
+	src: local('Cervo Neue Black Neue'), local('CervoNeue-BlackNeue'), url('CervoNeue-BlackNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-BlackNeue.woff2') format('woff2'), url('CervoNeue-BlackNeue.woff') format('woff'), url('CervoNeue-BlackNeue.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue ExBold Neue';
+	src: url('CervoNeue-ExtraBoldNeueItalic.eot');
+	src: local('Cervo Neue ExtraBold Neue Italic'), local('CervoNeue-ExtraBoldNeueItalic'), url('CervoNeue-ExtraBoldNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-ExtraBoldNeueItalic.woff2') format('woff2'), url('CervoNeue-ExtraBoldNeueItalic.woff') format('woff'), url('CervoNeue-ExtraBoldNeueItalic.ttf') format('truetype');
+	font-weight: 800;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Light Neue';
+	src: url('CervoNeue-LightNeue.eot');
+	src: local('Cervo Neue Light Neue'), local('CervoNeue-LightNeue'), url('CervoNeue-LightNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-LightNeue.woff2') format('woff2'), url('CervoNeue-LightNeue.woff') format('woff'), url('CervoNeue-LightNeue.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue ExtraBold Neue';
+	src: url('CervoNeue-ExtraBoldNeue.eot');
+	src: local('Cervo Neue ExtraBold Neue'), local('CervoNeue-ExtraBoldNeue'), url('CervoNeue-ExtraBoldNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-ExtraBoldNeue.woff2') format('woff2'), url('CervoNeue-ExtraBoldNeue.woff') format('woff'), url('CervoNeue-ExtraBoldNeue.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue Neue';
+	src: url('CervoNeue-RegularNeueItalic.eot');
+	src: local('Cervo Neue Regular Neue Italic'), local('CervoNeue-RegularNeueItalic'), url('CervoNeue-RegularNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-RegularNeueItalic.woff2') format('woff2'), url('CervoNeue-RegularNeueItalic.woff') format('woff'), url('CervoNeue-RegularNeueItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Neue';
+	src: url('CervoNeue-RegularNeue.eot');
+	src: local('Cervo Neue Regular Neue'), local('CervoNeue-RegularNeue'), url('CervoNeue-RegularNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-RegularNeue.woff2') format('woff2'), url('CervoNeue-RegularNeue.woff') format('woff'), url('CervoNeue-RegularNeue.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue Bold Neue';
+	src: url('CervoNeue-BoldNeue.eot');
+	src: local('Cervo Neue Bold Neue'), local('CervoNeue-BoldNeue'), url('CervoNeue-BoldNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-BoldNeue.woff2') format('woff2'), url('CervoNeue-BoldNeue.woff') format('woff'), url('CervoNeue-BoldNeue.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue Thin Neue';
+	src: url('CervoNeue-ThinNeueItalic.eot');
+	src: local('Cervo Neue Thin Neue Italic'), local('CervoNeue-ThinNeueItalic'), url('CervoNeue-ThinNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-ThinNeueItalic.woff2') format('woff2'), url('CervoNeue-ThinNeueItalic.woff') format('woff'), url('CervoNeue-ThinNeueItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Thin Neue';
+	src: url('CervoNeue-ThinNeue.eot');
+	src: local('Cervo Neue Thin Neue'), local('CervoNeue-ThinNeue'), url('CervoNeue-ThinNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-ThinNeue.woff2') format('woff2'), url('CervoNeue-ThinNeue.woff') format('woff'), url('CervoNeue-ThinNeue.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue ExLight Neue';
+	src: url('CervoNeue-ExtraLightNeueItalic.eot');
+	src: local('Cervo Neue ExtraLight Neue Italic'), local('CervoNeue-ExtraLightNeueItalic'), url('CervoNeue-ExtraLightNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-ExtraLightNeueItalic.woff2') format('woff2'), url('CervoNeue-ExtraLightNeueItalic.woff') format('woff'), url('CervoNeue-ExtraLightNeueItalic.ttf') format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Bold Neue';
+	src: url('CervoNeue-BoldNeueItalic.eot');
+	src: local('Cervo Neue Bold Neue Italic'), local('CervoNeue-BoldNeueItalic'), url('CervoNeue-BoldNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-BoldNeueItalic.woff2') format('woff2'), url('CervoNeue-BoldNeueItalic.woff') format('woff'), url('CervoNeue-BoldNeueItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Medium Neue';
+	src: url('CervoNeue-MediumNeueItalic.eot');
+	src: local('Cervo Neue Medium Neue Italic'), local('CervoNeue-MediumNeueItalic'), url('CervoNeue-MediumNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-MediumNeueItalic.woff2') format('woff2'), url('CervoNeue-MediumNeueItalic.woff') format('woff'), url('CervoNeue-MediumNeueItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue SemiBold Neue';
+	src: url('CervoNeue-SemiBoldNeueItalic.eot');
+	src: local('Cervo Neue SemiBold Neue Italic'), local('CervoNeue-SemiBoldNeueItalic'), url('CervoNeue-SemiBoldNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-SemiBoldNeueItalic.woff2') format('woff2'), url('CervoNeue-SemiBoldNeueItalic.woff') format('woff'), url('CervoNeue-SemiBoldNeueItalic.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Medium Neue';
+	src: url('CervoNeue-MediumNeue.eot');
+	src: local('Cervo Neue Medium Neue'), local('CervoNeue-MediumNeue'), url('CervoNeue-MediumNeue.eot?#iefix') format('embedded-opentype'), url('CervoNeue-MediumNeue.woff2') format('woff2'), url('CervoNeue-MediumNeue.woff') format('woff'), url('CervoNeue-MediumNeue.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cervo Neue Light Neue';
+	src: url('CervoNeue-LightNeueItalic.eot');
+	src: local('Cervo Neue Light Neue Italic'), local('CervoNeue-LightNeueItalic'), url('CervoNeue-LightNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-LightNeueItalic.woff2') format('woff2'), url('CervoNeue-LightNeueItalic.woff') format('woff'), url('CervoNeue-LightNeueItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Cervo Neue Black Neue';
+	src: url('CervoNeue-BlackNeueItalic.eot');
+	src: local('Cervo Neue Black Neue Italic'), local('CervoNeue-BlackNeueItalic'), url('CervoNeue-BlackNeueItalic.eot?#iefix') format('embedded-opentype'), url('CervoNeue-BlackNeueItalic.woff2') format('woff2'), url('CervoNeue-BlackNeueItalic.woff') format('woff'), url('CervoNeue-BlackNeueItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+// Source Sans Pro

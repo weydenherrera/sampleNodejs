@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title block allowing child pages to override-->
+    <title>JinJerJade</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Bower Components-->
+    <link href="assets/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/vendor/authservice/authservice.css" rel="stylesheet" type="text/css">
+    <!-- Fonts-->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  </head>
+  <body>
+    <nav class="nav close"><a class="menu-close" href="javascript:void(0)" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">&times;</a>
+      <ul>
+        <li><a href="my_reviews.html">My Reviews</a></li>
+        <li><a href="">Browse Reviews</a></li>
+        <li><a href="">Write Review</a></li>
+        <li><a href="">Self-Help Tools</a></li>
+        <li><a href="">How it Works</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="">Feedback / Contact</a></li>
+        <li role="separator"><br></li>
+        <li role="separator"><br></li>
+        <li role="separator"><br></li>
+        <li><a href="" id="authservice-login-mainbutton" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">Sign in</a></li>
+        <li><a href="my_reviews.html" id="authservice-settings-button" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">Account Settings</a><a href="" id="authservice-logout-button" onclick="$(&quot;.burger-bar&quot;).trigger(&quot;click&quot;)">Sign out</a></li>
+      </ul>
+    </nav>
+    <header>
+      <nav>
+        <div class="menu"><a class="burger-bar" href=""><i class="top"></i><i class="mid"></i><i class="bot"></i></a></div>
+        <div class="logo"><a href="index.html"><img src="assets/images/logo.png"></a></div>
+        <div class="languages"><a href=""><img src="assets/images/flag-china.png"></a></div>
+      </nav>
+      <div class="search"><span class="input" contenteditable="true" onfocus="this.innerHTML = &quot;&quot;" onblur="this.innerHTML = &quot;Search for Insurer&quot;">Search for Insurer</span></div>
+    </header>
+    <section>
+      <div class="container" ng-app="myApp" ng-controller="myCtrl">
+        <article>
+          <div class="row" ng-controller="myCtrl as lsc">
+            <div class="col-md-3">
+              <div class="steps" ng-cloak><a class="part active" href="" data-label="Info" data-step="1"></a><a class="bullets bulletselected hidden-xs hidden-sm active" href="insurer.html" data-label="{{insurerName}}"></a><a class="bullets bulletselected hidden-xs hidden-sm active" href="product.html" data-label="{{productName}}"></a><a class="bullets bulletselected hidden-xs hidden-sm active" href="means_of_purchase.html" data-label="{{lsc.latestData('mopName')}}"></a><a class="bullets bulletselected hidden-xs hidden-sm active" href="purchase_date.html" data-label="{{lsc.latestData('purchaseDate')}}"></a><a class="part active" href="" data-label="My Review" data-step="2"></a><a class="part active" href="" data-label="Publish" data-step="3"></a></div>
+            </div>
+            <div class="col-md-6" ng-cloak>
+              <p class="lead text-center">Ready to Publish?</p>
+              <div class="card _rating-summary">
+                <div class="heading"><img class="rating-sm" ng-repeat="x in ratings" data-label="{{x.rate}}" ng-src="{{x.rate &lt;= lsc.latestData('overAllRatingStar') &amp;&amp; 'assets/images/icon-star-small-on.png' || 'assets/images/icon-star-small-off.png'}}"><small><span class="text-muted"></span></small></div>
+                <div class="review">
+                  <h4>{{valueTitle}}</h4>
+                  <p>{{valueDescription}}</p>
+                  <div class="details">
+                    <div class="row" ng-show="isFiledClaim">
+                      <div class="col-sm-4 col-xs-6">Claims Experience</div>
+                      <div class="col-sm-4 col-xs-6">
+                        <div class="stars _small"><img class="rating-sm" ng-repeat="x in ratings" data-label="{{x.rate}}" ng-src="{{x.rate &lt;= lsc.latestData('claimExpStar') &amp;&amp; 'assets/images/icon-star-small-on.png' || 'assets/images/icon-star-small-off.png'}}"></div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="overflow ellipsis">{{claimExpComment}}</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6">Value for Money</div>
+                      <div class="col-sm-4 col-xs-6">
+                        <div class="stars _small"><img class="rating-sm" ng-repeat="x in ratings" data-label="{{x.rate}}" ng-src="{{x.rate &lt;= lsc.latestData('valueMoneyStar') &amp;&amp; 'assets/images/icon-star-small-on.png' || 'assets/images/icon-star-small-off.png'}}"></div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="overflow ellipsis">{{valueMoneyComment}}</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6">Financial Advice</div>
+                      <div class="col-sm-4 col-xs-6">
+                        <div class="stars _small"><img class="rating-sm" ng-repeat="x in ratings" data-label="{{x.rate}}" ng-src="{{x.rate &lt;= lsc.latestData('financialStar') &amp;&amp; 'assets/images/icon-star-small-on.png' || 'assets/images/icon-star-small-off.png'}}"></div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="overflow ellipsis">{{financialComment}}</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6">Customer Service</div>
+                      <div class="col-sm-4 col-xs-6">
+                        <div class="stars _small"><img class="rating-sm" ng-repeat="x in ratings" data-label="{{x.rate}}" ng-src="{{x.rate &lt;= lsc.latestData('customerServStar') &amp;&amp; 'assets/images/icon-star-small-on.png' || 'assets/images/icon-star-small-off.png'}}"></div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="overflow ellipsis">{{customerServComment}}</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-xs-6">Overall Communication</div>
+                      <div class="col-sm-4 col-xs-6">
+                        <div class="stars _small"><img class="rating-sm" ng-repeat="x in ratings" data-label="{{x.rate}}" ng-src="{{x.rate &lt;= lsc.latestData('communicationStar') &amp;&amp; 'assets/images/icon-star-small-on.png' || 'assets/images/icon-star-small-off.png'}}"></div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="overflow ellipsis">{{communicationComment}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center"><br>
+                <div class="radio">
+                  <div class="col-md-12 col-xs-12" align="left">
+                    <div class="checkbox checkbox-info checkbox-circle">
+                      <input id="wnr3" type="checkbox" name="register_webinar_" value="3" ng-model="isAgree">
+                      <label for="wnr3">I certify that:</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-xs-12" align="left">
+                    <ul>
+                      <li>This review is based on my own experience and is my genuine opinion.</li>
+                      <li>I am not in any way related to the company, an employee, representative of the company or have any interest in the outcome of the overall rating.</li>
+                    </ul>
+                  </div>
+                </div><br>
+                <div class="jjj-btn-group"><a class="jjj-btn gray" href="" ng-click="back()">Edit</a><a class="jjj-btn" ng-class="{'green' : isAgree, 'gray' : !isAgree}" id="btnNext" ng-disabled="isAgree" href="" ng-click="nextPage()">Next</a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="clearfix visible-sm visible-xs">
+      <div class="footer-spacer"></div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer-graphic">
+          <div class="col rocket hidden-xs">
+            <div class="image"><img src="assets/images/img-rocket.png"></div>
+          </div>
+          <div class="col support">
+            <div class="image">
+              <div class="bubble _fluid"><a href="">How can I help?</a></div><img src="assets/images/img-boy.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-xs-4">
+            <div class="logo"><img src="assets/images/icon-footer.png"></div>
+          </div>
+          <div class="col-md-8 col-xs-8">
+            <nav><a href="">Write a Review</a><a href="">Browse Reviews</a><a href="">FAQ</a><a href="">How it Works</a><a href="">Self-Help Tools</a><a href="">About JinJerJade</a><a href="">For Insurers</a></nav>
+          </div>
+          <div class="col-md-2 hidden-xs">
+            <div class="social"><a href=""><i class="fa fa-facebook"></i></a><a href=""><i class="fa fa-twitter"></i></a><a href=""><i class="fa fa-instagram"></i></a></div>
+          </div>
+        </div><br>
+        <hr>
+        <p class="links"><a href="">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="">&copy;Galileo Platforms</a></p>
+      </div>
+    </footer>
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel">
+      <div class="modal-dialog modal-sm" role="document" align="center">
+        <div class="modal-content" id="authservice-login-div">
+          <div class="modal-body">
+            <div class="modal-graphic login">
+              <div class="buttons"><img src="assets/images/img-buttons.png"></div>
+              <div class="girl"><img src="assets/images/img-girl-rotate-left.png"></div>
+            </div>
+            <p class="text-center">Almost there! Please sign in or register to post your review.</p>
+            <div class="form-group _form">
+              <input class="form-control" type="email" id="authservice-login-username" placeholder="Email">
+              <input class="form-control" type="password" id="authservice-login-password" placeholder="password">
+            </div><a class="jjj-btn green block" href="" id="authservice-login-submit" onclick="return false;">Sign in</a>
+            <div class="alert alert-danger" id="authservice-login-errmsg" role="alert" style="display:none;"><span class="glyphicon glyphicon-exclamation-sign aria-hidden"></span><span class="sr-only">Error:</span>Invalid email / password</div>
+            <p class="or">or</p><a class="jjj-btn fb block" href=""><i class="fa fa-facebook"></i>&nbsp;Login with Facebook</a><br><br><a class="jjj-btn link block" href="#modalSignupEmail" data-toggle="modal" data-dismiss="modal">Sign up with your email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSignupEmail" tabindex="-1" role="dialog" aria-labelledby="modalSignupEmailLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header signup-email">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="logo text">JinJerJade</div>
+                <p class="text-center">Please sign in below, or sign up using your email or social account.</p><br>
+                <div class="form-group">
+                  <form name="myEmailForm"></form>
+                  <input class="form-control" type="email" placeholder="Enter your email address" name="inputEmail" id="authservice-signup-email"><span class="error" id="authservice-signup-errmsg"> </span>
+                  <p class="text-center">Enter a valid email address.</p>
+                </div><a class="jjj-btn green block" href="" data-toggle="modal" data-dismiss="modal" id="authservice-signup-email-button">Continue</a>
+                <p class="or">or continue with</p><a class="jjj-btn fb block" href=""><i class="fa fa-facebook"></i>&nbsp;Login with Facebook</a>
+                <p></p><a class="jjj-btn gplus block" href=""><i class="fa fa-google-plus"></i>&nbsp;Login with Google +</a>
+              </div>
+            </div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalNiceWork" tabindex="-1" role="dialog" aria-labelledby="modalNiceWorklLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <h2 class="text-center">Nice Work!</h2><br>
+                <div class="text-center"><img src="assets/images/img-boom.png"></div><br><br>
+                <p class="text-center">You're all set! Now go forth and get your review on!</p><br><a class="jjj-btn green block" href="">Browse Reviews</a>
+                <p></p><a class="jjj-btn blue block" href="">Write a Review</a>
+                <div class="clearfix"><br></div>
+                <p class="text-center">Want to get in touch?&nbsp;<a class="link green" href="">Contact Us.</a></p>
+              </div>
+            </div><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalNiceWork2" tabindex="-1" role="dialog" aria-labelledby="modalNiceWorklLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h2 class="text-center">Nice Work!</h2><br>
+                <div class="text-center"><img src="assets/images/img-checklist.png"></div><br><br>
+                <p class="text-center">You did it, you're officially a member of the Jinjerjade family. One last thing, we need you to verify hyour email. So please check your inbox and in the meantime...</p><br>
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3"><a class="jjj-btn green block" href="">Browse Reviews</a>
+                    <p></p><a class="jjj-btn blue block" href="insurer.html">Write a Review</a>
+                  </div>
+                </div>
+                <div class="clearfix"><br></div>
+                <p class="text-center">Want to get in touch?&nbsp;<a class="link green" href="">Contact Us.</a></p>
+              </div>
+            </div><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="modalSignupFormLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-list.png"></div>
+                <h2 class="text-center">Welcome!</h2>
+                <p class="text-center">Looks like you're new here. Please fill out the below info to create an account</p><br>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input class="form-control" type="text" placeholder="Enter your email address" value="john@example.com" id="authservice-signup-form-email" disabled>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input class="form-control" type="text" placeholder="" value="John">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Last / Family Name</label>
+                      <input class="form-control" type="text" placeholder="" value="Smith">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Username</label>
+                  <input class="form-control" type="text" placeholder="" value="John">
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input class="form-control" type="password" placeholder="" value="password">
+                </div>
+                <div class="form-group">
+                  <label>Re-enter Password</label>
+                  <input class="form-control" type="password" placeholder="" value="password">
+                </div>
+                <div class="text-center">
+                  <p class="or">Password must be 6 characters and at least one numeric digit or a special character (#,$, %, etc.)</p>
+                </div><br>
+                <div class="text-center"><a class="jjj-btn green" href="#modalNiceWork2" data-toggle="modal" data-dismiss="modal">Sign up</a></div>
+              </div>
+            </div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalMemberLogin" tabindex="-1" role="dialog" aria-labelledby="modalMemberLoginLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header signup-email">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <h2 class="text-center">Welcome Back!</h2>
+                <p class="text-center">Please enter your password below to sign in.</p><br>
+                <div class="form-group">
+                  <input class="form-control" type="text" id="authservice-loginEmail-username" placeholder="Enter your email address" value="">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="password" id="authservice-loginEmail-password" placeholder="Enter your Password" value="">
+                </div>
+                <div class="alert alert-danger" id="authservice-loginEmail-errmsg" role="alert" style="display:none;"><span class="glyphicon glyphicon-exclamation-sign aria-hidden"></span><span class="sr-only">Error:</span>Invalid email / password</div><a class="jjj-btn green block" href="" data-toggle="modal" data-dismiss="modal" id="authservice-loginEmail-submit">Continue</a>
+                <p class="or">or</p><a class="jjj-btn fb block" href=""><i class="fa fa-facebook"></i>&nbsp;Login with Facebook</a>
+                <p></p><a class="jjj-btn gplus block" href=""><i class="fa fa-google-plus"></i>&nbsp;Login with Google +</a>
+              </div>
+            </div>
+            <div class="clearfix"><br></div><a class="jjj-btn link block" href="#modalSignupEmail" data-toggle="modal" data-dismiss="modal">Sign up with your email</a><br>
+            <p class="text-center">Forgot your password?&nbsp;<a class="link green" href="" data-toggle="modal" data-dismiss="modal" id="authservice-reset-password">Reset it.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalResetPassword" tabindex="-1" role="dialog" aria-labelledby="modalResetPasswordLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-bunny.png"></div>
+                <h2 class="text-center">Doh!</h2>
+                <p class="text-center">Enter your email address and we'll send you instructions to reset your password.</p><br>
+                <div class="form-group">
+                  <input class="form-control" type="text" placeholder="Enter your email address" value="john@email.com">
+                </div><a class="jjj-btn green block" href="#modalGotMail" data-toggle="modal" data-dismiss="modal">Continue</a>
+              </div>
+            </div>
+            <div class="clearfix"><br><br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalGotMail" tabindex="-1" role="dialog" aria-labelledby="modalGotMailLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-bunny.png"></div>
+                <h2 class="text-center">You've Got Mail!</h2>
+                <p class="text-center">We've sent you an email with instructions to reset your password. Please check your inbox.</p><br><br><a class="jjj-btn green block" href="#" data-toggle="modal" data-dismiss="modal">Thanks!</a>
+              </div>
+            </div>
+            <div class="clearfix"><br><br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalNewPassword" tabindex="-1" role="dialog" aria-labelledby="modalNewPasswordLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p><a class="link" href="">Need Help?</a></p>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+                <div class="text-center"><img src="assets/images/img-wand.png"></div>
+                <h2 class="text-center">Reset Password</h2>
+                <p class="text-center">We all forget! Your new password must be 6 characters and at least one numeric digit or a special character (#, $, % etc.).</p><br>
+                <div class="form">
+                  <div class="form-group">
+                    <label><small>New Password</small></label>
+                    <input class="form-control" type="password" placeholder="" value="password">
+                  </div>
+                  <div class="form-group">
+                    <label><small>Re-enter New Password</small></label>
+                    <input class="form-control" type="password" placeholder="" value="password">
+                  </div>
+                </div><a class="jjj-btn green block" href="#modalNiceWork" data-toggle="modal" data-dismiss="modal">Continue</a>
+              </div>
+            </div>
+            <div class="clearfix"><br><br></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+          <Are>you sure?</Are>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2"></div>
+        <button class="btn btn-primary" type="button" data-dismiss="modal" id="delete">Delete</button>
+        <button class="btn" type="button" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+    <!-- Bower Components-->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/scripts/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
+    <script src="assets/scripts/main.js" type="text/javascript"></script>
+    <script src="assets/vendor/authservice/authservice.js" type="text/javascript"></script>
+    <script src="assets/scripts/environment.js" type="text/javascript"></script>
+    <!-- page scripts goes here...-->
+    <!-- External Script goes here...-->
+    <script src="assets/vendor/crowdhound/submitReview.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+      
+        $('.answers .search').on('keydown', 'span', function(e) {
+          if ( e.keyCode == 13 ) {
+            e.preventDefault();
+            //- Add form action here.
+          }
+        });
+      
+      });
+      
+      /************************************************************
+       *
+       *    Angular code.
+       */
+      var app = angular.module("myApp", []);
+      
+      /*
+      * Controller
+      */
+      app.controller("myCtrl", function($scope, LS, $http) {
+      
+        // Check if user already filed claim
+        $scope.isFiledClaim = true;
+        if(LS.getData('claimAnswer') == 0){
+          $scope.isFiledClaim = false;
+        }
+      
+        //Value for each star
+        $scope.ratings = [
+          {rate: '1'},
+          {rate: '2'},
+          {rate: '3'},
+          {rate: '4'},
+          {rate: '5'},
+        ]
+      
+        $scope.isAgree = false;
+      
+        $scope.isEmailValid = 'john@email.com';
+      
+        $scope.valueTitle = LS.getData('valueTitle');
+        $scope.valueDescription = LS.getData('valueDescription');
+        $scope.insurerId = parseInt( LS.getData('insurerId') );
+        $scope.insurerName = LS.getData('insurerName');
+        $scope.productId = parseInt( LS.getData('productId') );
+        $scope.productName = LS.getData('productName');
+        $scope.mopName = LS.getData('mopName');
+        $scope.purchaseDate = LS.getData('purchaseDate');
+        $scope.overAllRatingStar = LS.getData('overAllRatingStar');
+        $scope.claimStatus =  parseInt( LS.getData('claimAnswer') );
+      
+        $scope.claimExpComment = LS.getData('claimComment');
+        $scope.valueMoneyComment = LS.getData('valueComment');
+        $scope.financialComment = LS.getData('financialComment');
+        $scope.customerServComment = LS.getData('customerServComment');
+        $scope.communicationComment = LS.getData('communicationComment');
+      
+        $scope.claimExpStar = parseInt( LS.getData('claimExpStar') );
+        $scope.valueMoneyStar = parseInt( LS.getData('valueMoneyStar') );
+        $scope.financialStar = parseInt( LS.getData('financialStar') );
+        $scope.customerServStar = parseInt( LS.getData('customerServStar') );
+        $scope.communicationStar = parseInt( LS.getData('communicationStar') );
+        
+        $scope.back = function(){
+          window.location.href = "add_overall_rating.html";
+        }
+      
+        $scope.myTest = function(){
+          alert();
+        }
+      
+        //Get insurer id and display insurer
+        var insurer = LS.getData("insurerName");
+        var insurerdetail = JSON.parse(insurer);
+      
+        //Get product id and display product name
+        var product = LS.getData("productName");
+        var productdetail = JSON.parse(product);
+      
+        $scope.nextPage = function(){
+          if($scope.isAgree){
+            //check user if already logged in
+            var currentUserId = authservice.getCurrentUserId();
+            if(currentUserId){
+               localStorage.clear();
+               window.location.href = "nice_work.html";
+            }else{
+              /*insertCompletedReview();*/
+              $('#modalLogin').modal('show');
+            }
+            
+          }
+        }
+      
+        this.latestData = function(val) {
+          return LS.getData(val);
+        };
+        this.update = function(event) {
+          return LS.setData(event.target.getAttribute('data-key'), event.target.getAttribute('data-label'));
+        };
+      
+        $scope.insurerName = insurerdetail.Insurer;
+      
+        $scope.productName = productdetail.product;
+      
+        //convert rating to int
+        var params = {
+          "insurer_id": insurerdetail.Id,
+          "product_id": productdetail.id,
+          "means_of_purchase": $scope.mopName,
+          "purchase_date": $scope.purchaseDate,
+          "claim_status": $scope.claimStatus,
+          "overall_rating": $scope.overAllRatingStar,
+          "claim_rating": $scope.claimExpStar,
+          "claim_comment": $scope.claimExpComment,
+          "value_rating": $scope.valueMoneyStar,
+          "value_comment": $scope.valueMoneyComment,
+          "advice_rating": $scope.financialStar,
+          "advice_comment": $scope.financialComment,
+          "service_rating": $scope.customerServStar,
+          "service_comment": $scope.customerServComment,
+          "communication_rating": $scope.communicationStar,
+          "communication_comment": $scope.communicationComment,
+          "overall_title": $scope.valueTitle,
+          "overall_description": $scope.valueDescription,
+          "created_by": "test.tooltwist.com",
+          "status": 1,
+          "completed": 1,
+          "userId" : $scope.userId
+        }
+      
+      
+      
+         /***   Integrate CROWDHOUND HERE! **/ 
+      
+      
+        //- function insertCompletedReview(){
+        //-   console.log('params>>',params)
+      
+        //-   $http({
+        //-     method: 'POST',
+        //-     url: 'http://10.0.0.142/api/insertCompletedReview',   
+        //-     data : JSON.stringify(params),
+        //-     headers: {
+        //-       'Content-Type': 'application/json'
+        //-     }
+        //-   }).then(function (response) {
+        //-       // this callback will be called asynchronously
+        //-       resp =  response.data;
+        //-       alert("RESP: ", response);
+        //-       console.log("resp ", response);
+               
+        //-     }, function (response) {
+        //-       // called asynchronously if an error occurs
+        //-       // or server returns response with an error status.
+        //-       console.log("error ", response);             
+        //-       resp =  response;
+        //-       alert("ERROR: ", response);
+        //-     });
+           
+        //- }
+      
+      
+      });
+      
+      
+      /*
+      * Factories
+      */
+      // LS(Local Storage) Factory function for update and retrieve ratings data
+      app.factory("LS", function($window, $rootScope) {
+        return {
+          setData: function(key, val) {
+            $window.localStorage && $window.localStorage.setItem(key, val);
+            return this;
+          },
+          getData: function(val) {
+            return $window.localStorage && $window.localStorage.getItem(val);
+          }
+        };
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        
+        $('header').on('click', '.burger-bar', function(e) {
+          e.preventDefault();
+          $('nav.nav').toggleClass('close');
+        });
+        
+      });
+      
+      
+      /*
+       *  Set up the login part at the top of the page.
+       */
+      authservice.init({
+        // Environment specific values are defined in environment.js
+        host: AUTHSERVICE_HOST,
+        port: AUTHSERVICE_PORT,
+        tenant: AUTHSERVICE_TENANT,
+        pretend: AUTHSERVICE_USE_DUMMY_LOGIN,
+        onUserChange: function(user, ttuat, fromCookie) {
+          // If the current user came from the cookie, reload it
+          //if (fromCookie) {
+          //  console.log('Reloading user details (cookie details are just a summary)');
+          //  return authservice.reloadUser();
+          //}
+        }
+      
+      });
+    </script>
+  </body>
+</html>
